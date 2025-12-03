@@ -1,0 +1,10 @@
+.*
+!/.npmrc
+node_modules/
+dist/
+build/
+coverage/
+*.log
+*.tgz
+.vscode/
+.idea/

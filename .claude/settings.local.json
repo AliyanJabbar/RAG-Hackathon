@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git fetch:*)",
+      "mcp__context7__resolve-library-id"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

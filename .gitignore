@@ -1,0 +1,26 @@
+# Gitignore for Docusaurus/Node.js project
+
+# Node.js
+node_modules/
+dist/
+build/
+*.log
+.env*
+
+# Docusaurus specific
+.docusaurus/
+.cache/
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+
+# Temporary files
+*.tmp
+*.swp
