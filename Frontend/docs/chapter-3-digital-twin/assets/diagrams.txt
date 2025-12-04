@@ -1,0 +1,41 @@
+Physics simulation loop:
+
+```
+graph TD
+    A[Initialize World/Objects] --> B{Simulation Loop}
+    B --> C[Apply Forces (Gravity, Actuators)]
+    C --> D[Collision Detection]
+    D --> E[Constraint Solving (Joints, Contacts)]
+    E --> F[Integrate Motion (Update Positions/Velocities)]
+    F --> G[Render Scene]
+    G --> B
+```
+
+Sensor data pipeline:
+
+```
+graph TD
+    A[Simulated Sensor (LiDAR/Depth/IMU)] --> B[Raw Sensor Data]
+    B --> C[Noise & Distortion Model]
+    C --> D[Sensor Processing (Filtering, Calibration)]
+    D --> E[Perception Algorithms (SLAM, Object Detection)]
+    E --> F[Robot Control / Decision Making]
+```
+
+Gazebo → Unity interaction:
+
+```
+graph LR
+    Gazebo -- ROS/Middleware --> Unity
+```
+
+Humanoid visualization architecture:
+
+```
+graph TD
+    A[Humanoid Robot Model (URDF/SDF)] --> B[Physics Engine (Gazebo)]
+    A --> C[High-Fidelity Renderer (Unity)]
+    B -- Joint States/Sensor Data --> C
+    C -- Visual Feedback --> D[Human Operator]
+    D -- Commands --> B
+```

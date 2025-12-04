@@ -3,6 +3,9 @@ sidebar_position: 8
 title: "Modern Humanoids"
 slug: /chapter-1-physical-ai/07-modern-humanoids
 ---
+import ChapterTranslator from '@site/src/components/Translation/ChapterTranslator';
+
+<ChapterTranslator>
 
 # Modern Humanoids
 
@@ -47,3 +50,5 @@ Here are profiles of some prominent modern humanoids:
 | **Current Stage** | Prototype/Development   | Prototype/Development   | Available for research  | Commercial deployment   |
 
 These robots represent the cutting edge of humanoid development, each contributing to the advancement of physical AI through different design philosophies and application targets.
+
+</ChapterTranslator>

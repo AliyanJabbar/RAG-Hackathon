@@ -3,6 +3,9 @@ sidebar_position: 11
 title: "Learning Outcomes"
 slug: /chapter-1-physical-ai/10-learning-outcomes
 ---
+import ChapterTranslator from '@site/src/components/Translation/chapterTranslator';
+
+<ChapterTranslator>
 
 # Learning Outcomes
 
@@ -27,3 +30,5 @@ Upon completing the second week of this chapter, you should be able to:
 *   **Discuss Sim-to-Real Gap**: Understand the challenges of transferring AI policies from simulation to real-world robots and common mitigation strategies.
 *   **Profile Modern Humanoids**: Describe the key features and design philosophies of leading modern humanoid robots such as Optimus, Figure 01, Unitree G1, and Agility Digit.
 *   **Utilize Robotics Terminology**: Confidently use and define the common terms and concepts introduced in the glossary.
+
+</ChapterTranslator>
