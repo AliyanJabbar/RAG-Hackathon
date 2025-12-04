@@ -3,6 +3,9 @@ sidebar_position: 4
 title: "Sensorimotor Intelligence"
 slug: /chapter-1-physical-ai/03-sensorimotor-intelligence
 ---
+import ChapterTranslator from '@site/src/components/Translation/ChapterTranslator';
+
+<ChapterTranslator>
 
 # Sensorimotor Intelligence
 
@@ -34,3 +37,5 @@ Modern humanoids demonstrate advanced sensorimotor intelligence through a variet
 *   **Human-Robot Interaction**: During collaborative tasks, humanoids often use cameras and microphones to perceive human gestures, facial expressions, and vocal commands. Their sensorimotor intelligence allows them to interpret these cues and respond with appropriate actions, such as handing over a tool or adjusting their position to avoid collision, creating a more natural and intuitive interaction experience.
 
 These examples highlight how sensorimotor intelligence is not just about isolated sensing or acting but the intelligent, coordinated interplay between the two.
+
+</ChapterTranslator>

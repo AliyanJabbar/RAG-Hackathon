@@ -3,12 +3,15 @@ sidebar_position: 5
 title: "Physics-Aware Reasoning"
 slug: /chapter-1-physical-ai/04-physics-aware-reasoning
 ---
+import ChapterTranslator from '@site/src/components/Translation/ChapterTranslator';
+
+<ChapterTranslator>
 
 # Physics-Aware Reasoning
 
 ## Why Dexterity & Balance Require Physics Reasoning
 
-For physical AI systems, particularly humanoids, achieving true dexterity and stable balance in the real world is impossible without a deep understanding and application of physics. Every interactionwalking, grasping, pushing, liftingis governed by physical laws. Robots must be able to reason about forces, torques, momentum, and contact dynamics to predict how their actions will affect the environment and how the environment will, in turn, affect them. Without physics-aware reasoning, a robot might try to lift an object too heavy for its grip, walk on an unstable surface, or apply force in a way that causes it to lose balance. This reasoning allows robots to execute precise manipulations, maintain stability on varied terrains, and safely interact with their surroundings.
+For physical AI systems, particularly humanoids, achieving true dexterity and stable balance in the real world is impossible without a deep understanding and application of physics. Every interaction walking, grasping, pushing, lifting is governed by physical laws. Robots must be able to reason about forces, torques, momentum, and contact dynamics to predict how their actions will affect the environment and how the environment will, in turn, affect them. Without physics-aware reasoning, a robot might try to lift an object too heavy for its grip, walk on an unstable surface, or apply force in a way that causes it to lose balance. This reasoning allows robots to execute precise manipulations, maintain stability on varied terrains, and safely interact with their surroundings.
 
 ## Key Physics Concepts & Diagrams
 
@@ -48,3 +51,5 @@ graph LR
 While physics engines in simulations (e.g., Isaac Gym, MuJoCo) are invaluable for training and testing AI policies, the transition from simulation to the real world (sim-to-real gap) remains a significant challenge. Simulated physics, though highly advanced, can never perfectly capture all the complexities, nonlinearities, and unforeseen dynamics of the real physical environment. Factors like material properties, sensor noise, actuator imperfections, and subtle environmental variations are often simplified or omitted in simulations. Robust physics-aware reasoning in real-world robots requires algorithms that can adapt to these discrepancies, learning from real-world interactions and continuously refining their internal physical models.
 
 This adaptation often involves techniques such as real-time system identification, robust control methods, and learning algorithms that can transfer knowledge gained in simulation to practical applications with minimal re-training.
+
+</ChapterTranslator>

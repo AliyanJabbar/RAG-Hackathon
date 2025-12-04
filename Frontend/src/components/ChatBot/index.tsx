@@ -167,7 +167,7 @@ export default function AIAssistantWidget() {
                   <div className={styles.welcome}>
                     <div className={styles.welcomeIcon}><BsRobot size={40} /></div>
                     <div className={styles.welcomeText}>
-                      <p>"Hi! Select any text on the page to ask about it, or type a question below!"</p>
+                      <p>TIP: Select any text on the page to ask about it, or type a question below!</p>
                     </div>
                     <div className={styles.suggestions}>
                       {suggestedQuestions.map((q, i) => (
