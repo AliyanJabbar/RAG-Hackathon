@@ -7,6 +7,7 @@ from contextlib import asynccontextmanager
 from pydantic import BaseModel
 from typing import List, Literal
 import os
+from dotenv import load_dotenv
 
 # --- EXISTING CHAT IMPORTS ---
 from agents import Agent, Runner
@@ -26,7 +27,14 @@ from auth.auth import (
     decode_token
 )
 
-app = FastAPI()
+
+# --- STARTUP EVENT ---
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    await init_db()
+    yield
+
+app = FastAPI(lifespan=lifespan)
 
 # --- CORS SETUP ---
 # Combine your WEB_URL with localhost for flexibility
@@ -35,9 +43,13 @@ origins = [
     "http://127.0.0.1:3000",
 ]
 
+load_dotenv()
+
 web_url = os.getenv("WEB_URL")
 if web_url:
     origins.append(web_url)
+
+print("🌐 CORS allowed origins:", origins)
 
 app.add_middleware(
     CORSMiddleware,
@@ -47,14 +59,6 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# --- STARTUP EVENT ---
-
-@asynccontextmanager
-async def lifespan(app: FastAPI):
-    await init_db()
-    yield
-
-app = FastAPI(lifespan=lifespan)
 
 # ==========================================
 # AUTHENTICATION ENDPOINTS (New)
