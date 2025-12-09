@@ -80,7 +80,7 @@ const config: Config = {
       title: "Physical AI & Humanoid Robotics",
       logo: {
         alt: "My Site Logo",
-        src: "img/logo.svg",
+        src: "img/Robot.png",
       },
       items: [
         {
@@ -88,6 +88,11 @@ const config: Config = {
           sidebarId: "defaultSidebar",
           position: "left",
           label: "Docs",
+        },
+        {
+          type: 'custom-NavbarItem',
+          position: 'right',
+          // your custom props
         },
       ],
     },
@@ -99,7 +104,7 @@ const config: Config = {
           items: [
             {
               label: "Tutorial",
-              to: "/docs/intro",
+              to: "/docs/chapter-1-physical-ai",
             },
           ],
         },
@@ -107,16 +112,16 @@ const config: Config = {
           title: "Community",
           items: [
             {
-              label: "Stack Overflow",
-              href: "https://stackoverflow.com/questions/tagged/docusaurus",
+              label: "LinkedIn",
+              href: "https://www.linkedin.com/in/aliyan-jabbar",
             },
             {
-              label: "Discord",
-              href: "https://discordapp.com/invite/docusaurus",
+              label: "Portfolio",
+              href: "https://aliyan-jabbar-portfolio.vercel.app",
             },
             {
               label: "X",
-              href: "https://x.com/docusaurus",
+              href: "https://x.com/aliyanjabbar_ai",
             },
           ],
         },
@@ -125,7 +130,7 @@ const config: Config = {
           items: [
             {
               label: "GitHub",
-              href: "https://github.com/facebook/docusaurus",
+              href: "https://github.com/AliyanJabbar",
             },
           ],
         },

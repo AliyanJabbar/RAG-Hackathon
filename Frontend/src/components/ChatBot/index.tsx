@@ -2,11 +2,8 @@
 import React, { useState, useRef, useEffect } from "react";
 import clsx from "clsx";
 import { motion, AnimatePresence } from "motion/react";
-import { FaRegPaperPlane } from "react-icons/fa";
-import { BsRobot } from "react-icons/bs";
-import { LuMaximize2, LuMinimize2 } from "react-icons/lu";
-import { IoMdRefresh } from "react-icons/io";
-import { RiCloseLargeLine } from "react-icons/ri";
+import { FaPaperPlane } from "react-icons/fa6";
+import { RiRobot2Line, RiCloseLine, RiFullscreenLine, RiFullscreenExitLine, RiRefreshLine } from "react-icons/ri";
 import { marked } from "marked";
 import sanitizeInput from "../../utils/sanitizeInput";
 import { useChat } from "../../context/chatContext"; 
@@ -33,27 +30,24 @@ export default function AIAssistantWidget() {
   
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const chatContentRef = useRef<HTMLDivElement>(null);
-  const inputRef = useRef<HTMLInputElement>(null); // To focus input
+  const inputRef = useRef<HTMLInputElement>(null);
 
   const suggestedQuestions = [
-    "What are the hardware requirements for the Sim Rig?",
-    "Tell me about the Capstone Project.",
-    "What topics are covered in Module 3?",
+    "What is the ZMP stability criterion?",
+    "How do I install the ROS2 dependencies?",
+    "Explain the inverse kinematics module.",
   ];
 
-  // --- LOGIC TO HANDLE PRE-FILLING TEXT ---
+  // --- LOGIC PRESERVED ---
   useEffect(() => {
     if (draftText) {
-      setInput(draftText); // 1. Put text in input
-      clearDraftText();    // 2. Clear from context
-      
-      // 3. Focus the input field so user can type immediately
+      setInput(draftText);
+      clearDraftText();
       setTimeout(() => {
         inputRef.current?.focus();
       }, 100); 
     }
   }, [draftText, clearDraftText]);
-  // ----------------------------------------
 
   const scrollToBottom = () => {
     if (messagesEndRef.current && chatContentRef.current) {
@@ -74,7 +68,6 @@ export default function AIAssistantWidget() {
     setInput("");
     setIsLoading(true);
     setShowWelcome(false);
-    // console.log("backend url:", customFields.BACKEND_URL);
 
     try {
       const res = await fetch(`${customFields.BACKEND_URL}/chat`, {
@@ -92,7 +85,7 @@ export default function AIAssistantWidget() {
       console.error("Chat error:", error);
       setMessages((prev) => [
         ...prev,
-        { role: "bot", text: "❌ Sorry, something went wrong. Please try again." },
+        { role: "bot", text: "❌ Connection error. The robot is offline." },
       ]);
     } finally {
       setIsLoading(false);
@@ -111,15 +104,18 @@ export default function AIAssistantWidget() {
     <main className={styles.wrapper}>
       {/* Floating Chat Button */}
       <motion.button
-        aria-label="Open AI Assistant Chat"
-        whileTap={{ scale: 0.9, transition: { duration: 0.2 } }}
+        aria-label="Open Robotics AI"
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
         onClick={(e) => {
           e.stopPropagation();
           setIsOpen(!isOpen);
         }}
         className={styles.floatingBtn}
       >
-        <BsRobot size={23} className={styles.iconRobot} />
+        {/* Main Icon Change */}
+        <RiRobot2Line size={26} className={styles.iconRobot} />
+        <span className={styles.pulse} />
       </motion.button>
 
       {/* Chat Modal */}
@@ -127,36 +123,39 @@ export default function AIAssistantWidget() {
         {isOpen && (
           <motion.div
             key="chatbox"
-            initial={{ opacity: 0, y: 20, scale: 0.95 }}
+            initial={{ opacity: 0, y: 40, scale: 0.9 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
-            exit={{ opacity: 0, y: 20, scale: 0.95 }}
-            transition={{ duration: 0.2 }}
+            exit={{ opacity: 0, y: 40, scale: 0.9 }}
+            transition={{ type: "spring", damping: 25, stiffness: 300 }}
             onClick={(e) => e.stopPropagation()}
             onWheel={(e) => e.stopPropagation()}
             className={clsx(styles.modal, isLarge && styles.modalLarge)}
           >
-            {/* Header */}
+            {/* HUD Header */}
             <div className={styles.header}>
               <div className={styles.headerLeft}>
                 <div className={styles.avatar}>
-                  <BsRobot className={styles.headerIcon} />
-                  <div className={styles.statusDot} />
+                  <RiRobot2Line className={styles.headerIcon} />
+                  <div className={styles.scanLine} />
                 </div>
                 <div className={styles.headerInfo}>
-                  <h2 className={styles.title}>AI Assistant</h2>
-                  <p className={styles.subtitle}>{isLoading ? "Typing..." : "Online"}</p>
+                  <h2 className={styles.title}>Robotics AI</h2>
+                  <div className={styles.statusBadge}>
+                    <span className={clsx(styles.statusDot, isLoading && styles.statusBlink)} />
+                    {isLoading ? "THINKING..." : "ONLINE"}
+                  </div>
                 </div>
               </div>
               <div className={styles.headerActions}>
-                <motion.button onClick={handleRefresh} className={styles.actionBtn}>
-                  <IoMdRefresh size={22} />
-                </motion.button>
-                <motion.button onClick={() => setIsLarge(!isLarge)} className={clsx(styles.actionBtn, styles.hideMobile)}>
-                  {isLarge ? <LuMinimize2 size={20} /> : <LuMaximize2 size={20} />}
-                </motion.button>
-                <motion.button onClick={() => setIsOpen(false)} className={styles.actionBtn}>
-                  <RiCloseLargeLine size={20} />
-                </motion.button>
+                <button onClick={handleRefresh} className={styles.actionBtn} title="Reset Context">
+                  <RiRefreshLine size={18} />
+                </button>
+                <button onClick={() => setIsLarge(!isLarge)} className={clsx(styles.actionBtn, styles.hideMobile)} title="Resize">
+                  {isLarge ? <RiFullscreenExitLine size={18} /> : <RiFullscreenLine size={18} />}
+                </button>
+                <button onClick={() => setIsOpen(false)} className={clsx(styles.actionBtn, styles.closeBtn)} title="Close">
+                  <RiCloseLine size={20} />
+                </button>
               </div>
             </div>
 
@@ -165,13 +164,18 @@ export default function AIAssistantWidget() {
               <div ref={chatContentRef} className={styles.messagesArea}>
                 {showWelcome && messages.length === 0 ? (
                   <div className={styles.welcome}>
-                    <div className={styles.welcomeIcon}><BsRobot size={40} /></div>
+                    <div className={styles.welcomeVisual}>
+                      <RiRobot2Line size={48} />
+                    </div>
                     <div className={styles.welcomeText}>
-                      <p>TIP: Select any text on the page to ask about it, or type a question below!</p>
+                      <h3>Robotics AI is ready.</h3>
+                      <p>Ask about Kinematics, URDF, or select code from the docs to analyze.</p>
                     </div>
                     <div className={styles.suggestions}>
                       {suggestedQuestions.map((q, i) => (
-                        <button key={i} onClick={() => handleSuggestedQuestion(q)} className={styles.suggestionBtn}>{q}</button>
+                        <button key={i} onClick={() => handleSuggestedQuestion(q)} className={styles.suggestionBtn}>
+                          <span className={styles.cmdPrefix}>{">"}</span> {q}
+                        </button>
                       ))}
                     </div>
                   </div>
@@ -184,33 +188,38 @@ export default function AIAssistantWidget() {
                         </div>
                       </div>
                     ))}
-                    {isLoading && <div className={styles.loadingContainer}><div className={styles.typingIndicator}><span /><span /><span /></div></div>}
+                    {isLoading && (
+                      <div className={styles.loadingContainer}>
+                        <div className={styles.typingIndicator}>
+                          <span /><span /><span />
+                        </div>
+                      </div>
+                    )}
                     <div ref={messagesEndRef} />
                   </div>
                 )}
               </div>
-              <div className={styles.gradientTop} />
-              <div className={styles.gradientBottom} />
             </div>
 
-            {/* Input */}
+            {/* Input Area */}
             <div className={styles.inputContainer}>
-              <input
-                ref={inputRef}
-                className={styles.inputField}
-                placeholder="Ask me anything..."
-                value={input}
-                onChange={(e) => setInput(sanitizeInput(e.target.value))}
-                onKeyDown={(e) => e.key === "Enter" && sendMessage()}
-              />
-              <motion.button
-                whileTap={{ scale: 0.8 }}
-                onClick={() => sendMessage()}
-                disabled={isLoading}
-                className={clsx(styles.sendBtn, isLoading && styles.btnDisabled)}
-              >
-                <FaRegPaperPlane className={styles.sendIcon} />
-              </motion.button>
+              <div className={styles.inputWrapper}>
+                <input
+                  ref={inputRef}
+                  className={styles.inputField}
+                  placeholder="Enter command or query..."
+                  value={input}
+                  onChange={(e) => setInput(sanitizeInput(e.target.value))}
+                  onKeyDown={(e) => e.key === "Enter" && sendMessage()}
+                />
+                <button
+                  onClick={() => sendMessage()}
+                  disabled={isLoading}
+                  className={clsx(styles.sendBtn, isLoading && styles.btnDisabled)}
+                >
+                  <FaPaperPlane className={styles.sendIcon} />
+                </button>
+              </div>
             </div>
           </motion.div>
         )}

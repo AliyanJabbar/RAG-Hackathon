@@ -1,0 +1,55 @@
+.section {
+  padding: 4rem 0;
+  text-align: center;
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  font-weight: 800;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.card {
+  background: var(--ifm-card-background-color);
+  padding: 2rem;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+}
+
+.card:hover {
+  background: var(--ifm-color-emphasis-100);
+  transform: scale(1.05);
+}
+
+.icon {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 1rem;
+  color: var(--ifm-color-primary);
+}
+
+.toolName {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin: 0;
+}

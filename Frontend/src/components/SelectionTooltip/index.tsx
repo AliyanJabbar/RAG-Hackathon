@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { createPortal } from "react-dom";
 import { motion, AnimatePresence } from "motion/react";
-import { BsRobot } from "react-icons/bs";
 import { useChat } from "../../context/chatContext";
+import { RiRobot2Line } from "react-icons/ri";
 
 const tooltipStyle: React.CSSProperties = {
   position: "fixed",
@@ -95,7 +95,7 @@ export default function SelectionTooltip() {
           onMouseDown={(e) => e.preventDefault()}
           onClick={handleAsk}
         >
-          <BsRobot size={16} color="#61dafb" />
+          <RiRobot2Line size={16} color="#61dafb" />
           Ask AI
         </motion.button>
       )}

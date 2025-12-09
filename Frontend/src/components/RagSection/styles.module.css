@@ -1,0 +1,165 @@
+/* src/components/RagSection/styles.module.css */
+
+.section {
+  padding: 6rem 0;
+  width: 100%;
+  overflow: hidden;
+  background: #1b1b1b;
+}
+
+.container {
+  max-width: var(--ifm-container-width);
+  margin: 0 auto;
+  padding: 0 var(--ifm-spacing-horizontal);
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+/* Desktop: Split into 2 columns */
+@media (min-width: 996px) {
+  .contentGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+  }
+}
+
+/* Typography */
+.label {
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: var(--ifm-color-primary);
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+}
+
+/* Gradient Text Effect */
+.gradientText {
+  background: linear-gradient(90deg, var(--ifm-color-primary) 0%, #00d2ff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.description {
+  font-size: 1.125rem;
+  color: var(--ifm-color-content-secondary);
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  gap: 1rem;
+}
+
+/* --- Right Side: Chat Interface Visualization --- */
+.visualContainer {
+  position: relative;
+}
+
+/* The decorative blob behind the UI */
+.blob {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: var(--ifm-color-primary);
+  filter: blur(80px);
+  opacity: 0.2;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+
+/* The Chat Card */
+.chatCard {
+  position: relative;
+  z-index: 1;
+  background: var(--ifm-card-background-color);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: var(--ifm-global-shadow-lg);
+  backdrop-filter: blur(10px);
+}
+
+/* Chat Header */
+.chatHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  background-color: #22c55e;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #22c55e;
+}
+
+.inHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.headerText {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+/* Messages */
+.message {
+  padding: 1rem;
+  border-radius: 12px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  max-width: 90%;
+}
+
+.userMessage {
+  background-color: var(--ifm-color-emphasis-100);
+  color: var(--ifm-color-content);
+  margin-left: auto;
+  border-bottom-right-radius: 2px;
+}
+
+.aiMessage {
+  background: linear-gradient(135deg, var(--ifm-color-primary) 0%, var(--ifm-color-primary-dark) 100%);
+  color: white;
+  margin-right: auto;
+  border-bottom-left-radius: 2px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.aiBadge {
+  display: inline-block;
+  font-size: 0.7rem;
+  background: rgba(255,255,255,0.2);
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-bottom: 4px;
+  font-weight: bold;
+}
