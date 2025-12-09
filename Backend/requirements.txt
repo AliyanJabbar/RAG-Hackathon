@@ -1,6 +1,5 @@
 asyncpg>=0.31.0
 bcrypt==3.2.2
-cohere>=5.20.0
 email-validator>=2.3.0
 fastapi[standard]>=0.122.0
 openai-agents>=0.6.1
@@ -8,7 +7,5 @@ passlib[bcrypt]>=1.7.4
 python-dotenv>=1.2.1
 python-jose[cryptography]>=3.5.0
 python-multipart>=0.0.20
-qdrant-client>=1.16.1
 requests>=2.32.5
 sqlmodel>=0.0.27
-trafilatura>=2.0.0
