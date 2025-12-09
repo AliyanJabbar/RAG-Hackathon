@@ -3,6 +3,7 @@ from fastapi.security import OAuth2PasswordRequestForm
 from fastapi.middleware.cors import CORSMiddleware
 from sqlmodel import select
 from sqlmodel.ext.asyncio.session import AsyncSession
+from contextlib import asynccontextmanager
 from pydantic import BaseModel
 from typing import List, Literal
 import os
@@ -47,9 +48,13 @@ app.add_middleware(
 )
 
 # --- STARTUP EVENT ---
-@app.on_event("startup")
-async def on_startup():
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
     await init_db()
+    yield
+
+app = FastAPI(lifespan=lifespan)
 
 # ==========================================
 # AUTHENTICATION ENDPOINTS (New)
