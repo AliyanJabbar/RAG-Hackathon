@@ -9,7 +9,7 @@ import os
 
 # --- EXISTING CHAT IMPORTS ---
 from agents import Agent, Runner
-from llm_config import config, gemini_key
+from llm_config import config, gemini_key, open_router_config
 from qdrant.qdrant_retrieval import retrieve_data
 
 # --- AUTH & DB IMPORTS ---
@@ -210,7 +210,7 @@ async def chat(request: ChatRequest):
         result = await Runner.run(
             agent,
             input=conversation_context,
-            run_config=config,
+            run_config=open_router_config,
         )
 
         print("✅ Response generated successfully")
