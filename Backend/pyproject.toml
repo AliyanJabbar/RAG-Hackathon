@@ -1,9 +1,9 @@
 [project]
-name = "backend"
+name = "RAG-Hackathon-Backend"
 version = "0.1.0"
-description = "Add your description here"
+description = "RAG-Hackathon-Backend"
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.12"
 dependencies = [
     "asyncpg>=0.31.0",
     "bcrypt==3.2.2",
