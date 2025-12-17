@@ -3,9 +3,9 @@ sidebar_position: 1
 title: 'Chapter 3 Introduction to The Digital Twin'
 slug: /chapter-3-digital-twin/
 ---
-import ChapterTranslator from '@site/src/components/Translation/chapterTranslator';
+import ChapterCustomization from '@site/src/components/ChapterCustomization/ChapterCustomization';
 
-<ChapterTranslator>
+<ChapterCustomization>
 
 # Chapter 3 — The Digital Twin (Gazebo & Unity)
 
@@ -39,4 +39,4 @@ This chapter is structured into the following sections:
 7.  [Human-Robot Interaction Visualization](./07-human-robot-visualization.md)
 8.  [Learning Outcomes: Weeks 6–7](./08-learning-outcomes.md)
 
-</ChapterTranslator>
+</ChapterCustomization>

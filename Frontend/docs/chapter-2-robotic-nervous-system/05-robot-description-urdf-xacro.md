@@ -3,9 +3,9 @@ sidebar_position: 6
 title: "Robot Description: URDF and Xacro"
 slug: /chapter-2-robotic-nervous-system/05-robot-description-urdf-xacro
 ---
-import ChapterTranslator from '@site/src/components/Translation/chapterTranslator';
+import ChapterCustomization from '@site/src/components/ChapterCustomization/ChapterCustomization';
 
-<ChapterTranslator>
+<ChapterCustomization>
 
 # Robot Description: URDF and Xacro
 
@@ -53,4 +53,4 @@ When modeling a humanoid robot, the URDF and Xacro files describe its complex ar
 | **Complexity**   | Simpler, focused on robot model  | More complex, broader scope       |
 
 
-</ChapterTranslator>
+</ChapterCustomization>

@@ -3,9 +3,9 @@ sidebar_position: 6
 title: "Humanoid Sensors"
 slug: /chapter-1-physical-ai/05-humanoid-sensors
 ---
-import ChapterTranslator from '@site/src/components/Translation/chapterTranslator';
+import ChapterCustomization from '@site/src/components/ChapterCustomization/ChapterCustomization';
 
-<ChapterTranslator>
+<ChapterCustomization>
 
 # Humanoid Sensors
 
@@ -50,4 +50,4 @@ graph TD
 
 This integrated sensor suite allows humanoids to build a comprehensive understanding of their internal state and external environment, enabling them to perform complex tasks in dynamic, real-world settings.
 
-</ChapterTranslator>
+</ChapterCustomization>

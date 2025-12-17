@@ -3,9 +3,9 @@ sidebar_position: 8
 title: 'Human-Robot Interaction Visualization'
 slug: /chapter-3-digital-twin/human-robot-visualization
 ---
-import ChapterTranslator from '@site/src/components/Translation/chapterTranslator';
+import ChapterCustomization from '@site/src/components/ChapterCustomization/ChapterCustomization';
 
-<ChapterTranslator>
+<ChapterCustomization>
 
 # Human-Robot Interaction Visualization
 
@@ -62,4 +62,4 @@ When visualizing HRI for sim-to-real transfer, several factors must be considere
 
 Robust sim-to-real HRI solutions require careful validation in both simulated and physical environments, focusing on transferring not just robot capabilities, but also effective human-robot communication and collaboration strategies.
 
-</ChapterTranslator>
+</ChapterCustomization>

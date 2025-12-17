@@ -3,9 +3,9 @@ sidebar_position: 9
 title: "Perception-Planning-Action Loop"
 slug: /chapter-1-physical-ai/08-perception-planning-action-loop
 ---
-import ChapterTranslator from '@site/src/components/Translation/chapterTranslator';
+import ChapterCustomization from '@site/src/components/ChapterCustomization/ChapterCustomization';
 
-<ChapterTranslator>
+<ChapterCustomization>
 
 # Perception-Planning-Action Loop
 
@@ -55,4 +55,4 @@ graph LR
 
 This more detailed view highlights the importance of integrating various sensory inputs and the continuous decision-making process that guides the robot's intelligence.
 
-</ChapterTranslator>
+</ChapterCustomization>

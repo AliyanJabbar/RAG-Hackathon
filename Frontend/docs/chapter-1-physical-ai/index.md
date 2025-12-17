@@ -3,9 +3,9 @@ sidebar_position: 1
 title: "Chapter 1: Physical AI & Embodied Intelligence"
 slug: /chapter-1-physical-ai
 ---
-import ChapterTranslator from '@site/src/components/Translation/chapterTranslator';
+import ChapterCustomization from '@site/src/components/ChapterCustomization/ChapterCustomization';
 
-<ChapterTranslator>
+<ChapterCustomization>
 
 # Chapter 1: Physical AI & Embodied Intelligence
 
@@ -41,4 +41,4 @@ This roadmap outlines the key topics covered in Chapter 1, designed to provide a
 9.  [Terminology](/docs/chapter-1-physical-ai/09-terminology)
 10. [Learning Outcomes](/docs/chapter-1-physical-ai/10-learning-outcomes)
 
-</ChapterTranslator>
+</ChapterCustomization>

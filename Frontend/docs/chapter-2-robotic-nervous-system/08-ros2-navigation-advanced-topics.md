@@ -3,9 +3,9 @@ sidebar_position: 9
 title: "ROS 2 Navigation Advanced Topics"
 slug: /chapter-2-robotic-nervous-system/08-ros2-navigation-advanced-topics
 ---
-import ChapterTranslator from '@site/src/components/Translation/chapterTranslator';
+import ChapterCustomization from '@site/src/components/ChapterCustomization/ChapterCustomization';
 
-<ChapterTranslator>
+<ChapterCustomization>
 
 # ROS 2 Navigation Advanced Topics
 
@@ -78,4 +78,4 @@ This XML snippet illustrates how to configure and invoke the `ComputeRoute` ROS 
 
 By leveraging these advanced configuration and deployment techniques, you can build more robust and scalable robotic applications with the ROS 2 Navigation Stack.
 
-</ChapterTranslator>
+</ChapterCustomization>

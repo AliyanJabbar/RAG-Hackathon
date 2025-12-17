@@ -3,9 +3,9 @@ sidebar_position: 5
 title: "Agent Integration and Control Pipelines"
 slug: /chapter-2-robotic-nervous-system/04-agent-integration-and-control-pipelines
 ---
-import ChapterTranslator from '@site/src/components/Translation/chapterTranslator';
+import ChapterCustomization from '@site/src/components/ChapterCustomization/ChapterCustomization';
 
-<ChapterTranslator>
+<ChapterCustomization>
 
 # Agent Integration and Control Pipelines
 
@@ -61,4 +61,4 @@ A general pipeline for autonomous robotic systems can be visualized as follows:
 ```
 This diagram illustrates the flow of information and command from raw sensor data to physical robot movement, mediated by AI planning and ROS 2 control mechanisms.
 
-</ChapterTranslator>
+</ChapterCustomization>

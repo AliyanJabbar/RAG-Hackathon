@@ -3,9 +3,9 @@ sidebar_position: 5
 title: 'Robot Description Formats: URDF & SDF'
 slug: /chapter-3-digital-twin/robot-description-formats
 ---
-import ChapterTranslator from '@site/src/components/Translation/chapterTranslator';
+import ChapterCustomization from '@site/src/components/ChapterCustomization/ChapterCustomization';
 
-<ChapterTranslator>
+<ChapterCustomization>
 
 # Robot Description Formats: URDF & SDF
 
@@ -120,4 +120,4 @@ The choice between URDF and SDF often depends on the specific use case and integ
 
 In summary, URDF is excellent for describing individual robots within the ROS ecosystem, while SDF offers a more complete solution for describing entire simulation worlds and advanced physics interactions in Gazebo.
 
-</ChapterTranslator>
+</ChapterCustomization>

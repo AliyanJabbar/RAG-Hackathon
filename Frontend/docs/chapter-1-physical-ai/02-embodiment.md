@@ -3,9 +3,9 @@ sidebar_position: 3
 title: "Embodiment"
 slug: /chapter-1-physical-ai/01-embodiment
 ---
-import ChapterTranslator from '@site/src/components/Translation/chapterTranslator';
+import ChapterCustomization from '@site/src/components/ChapterCustomization/ChapterCustomization';
 
-<ChapterTranslator>
+<ChapterCustomization>
 
 # Embodiment
 
@@ -23,4 +23,4 @@ The concept of embodiment in AI and robotics draws heavily from biological syste
 
 This inspiration leads to robots that are not just intelligent but also physically competent, capable of navigating and manipulating the real world with a degree of grace and adaptability that mirrors biological organisms.
 
-</ChapterTranslator>
+</ChapterCustomization>

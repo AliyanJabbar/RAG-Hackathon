@@ -3,9 +3,9 @@ sidebar_position: 7
 title: "ROS 2 Navigation Stack Overview"
 slug: /chapter-2-robotic-nervous-system/06-ros2-navigation-stack-overview
 ---
-import ChapterTranslator from '@site/src/components/Translation/chapterTranslator';
+import ChapterCustomization from '@site/src/components/ChapterCustomization/ChapterCustomization';
 
-<ChapterTranslator>
+<ChapterCustomization>
 
 # ROS 2 Navigation Stack Overview
 
@@ -55,4 +55,4 @@ ros2 launch nav2_bringup tb3_simulation_launch.py headless:=False
 
 This command initializes various components, including AMCL localization, robot state publishing, the Gazebo instance with Turtlebot3, and RVIZ for visualization.
 
-</ChapterTranslator>
+</ChapterCustomization>

@@ -3,9 +3,9 @@ sidebar_position: 7
 title: 'Unity Environment Creation for High-Fidelity Rendering'
 slug: /chapter-3-digital-twin/unity-environment
 ---
-import ChapterTranslator from '@site/src/components/Translation/chapterTranslator';
+import ChapterCustomization from '@site/src/components/ChapterCustomization/ChapterCustomization';
 
-<ChapterTranslator>
+<ChapterCustomization>
 
 # Unity Environment Creation for High-Fidelity Rendering
 
@@ -59,4 +59,4 @@ While Unity and Gazebo both offer physics simulation, their strengths are comple
 
 By integrating Gazebo's simulation backend with Unity's rendering frontend, developers can achieve a powerful digital twin setup that combines the best of both worlds: robust physics and realistic visuals.
 
-</ChapterTranslator>
+</ChapterCustomization>

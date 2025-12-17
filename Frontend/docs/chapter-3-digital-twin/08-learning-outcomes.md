@@ -3,9 +3,9 @@ sidebar_position: 9
 title: 'Learning Outcomes: Weeks 6–7'
 slug: /chapter-3-digital-twin/learning-outcomes
 ---
-import ChapterTranslator from '@site/src/components/Translation/chapterTranslator';
+import ChapterCustomization from '@site/src/components/ChapterCustomization/ChapterCustomization';
 
-<ChapterTranslator>
+<ChapterCustomization>
 
 # Learning Outcomes: Weeks 6–7
 
@@ -30,4 +30,4 @@ Upon successful completion of Chapter 3, students will be able to:
 *   **Visualize Human-Robot Interaction:** Implement and visualize various human-robot interaction scenarios, including robot pose, sensor overlays, and perception outputs.
 *   **Analyze Sim-to-Real Considerations:** Discuss the challenges and strategies for bridging the sim-to-real gap in both robot behavior and human perception.
 
-</ChapterTranslator>
+</ChapterCustomization>

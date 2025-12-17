@@ -1,14 +1,15 @@
 import React, { useState, useCallback } from 'react';
-import styles from './ChapterTranslation.module.css';
+import styles from './ChapterCustomization.module.css';
 import { useAuth } from '../../context/AuthContext';
 import ReactMarkdown from 'react-markdown'; // <--- IMPORT THIS
 import remarkGfm from 'remark-gfm';         // <--- IMPORT THIS
+import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 
-interface ChapterTranslatorProps {
+interface ChapterCustomizationProps {
   children: React.ReactNode;
 }
 
-export default function ChapterTranslator({ children }: ChapterTranslatorProps) {
+export default function ChapterCustomization({ children }: ChapterCustomizationProps) {
   // Get user from context. We don't use authToken here because it's not in the context value.
   const { user, loading: authLoading } = useAuth();
 
@@ -22,6 +23,11 @@ export default function ChapterTranslator({ children }: ChapterTranslatorProps) 
   const [customizedContent, setCustomizedContent] = useState<string | null>(null);
   const [isContentCustomized, setIsContentCustomized] = useState(false);
 
+  const {
+    siteConfig: {customFields},
+  } = useDocusaurusContext();
+  const BACKEND_URL = customFields.BACKEND_URL || 'http://localhost:8000';
+  
   // Recursively extract text from React children
   const extractText = useCallback((node: React.ReactNode): string => {
     if (typeof node === 'string') return node;
@@ -129,7 +135,7 @@ export default function ChapterTranslator({ children }: ChapterTranslatorProps) 
         hardware_experience: user.hardware_experience || 'intermediate',
       };
 
-      const response = await fetch('http://localhost:8000/customize_text', {
+      const response = await fetch(`${BACKEND_URL}/customize_text`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

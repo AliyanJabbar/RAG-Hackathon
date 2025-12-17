@@ -3,9 +3,9 @@ sidebar_position: 8
 title: "Modern Humanoids"
 slug: /chapter-1-physical-ai/07-modern-humanoids
 ---
-import ChapterTranslator from '@site/src/components/Translation/chapterTranslator';
+import ChapterCustomization from '@site/src/components/ChapterCustomization/ChapterCustomization';
 
-<ChapterTranslator>
+<ChapterCustomization>
 
 # Modern Humanoids
 
@@ -51,4 +51,4 @@ Here are profiles of some prominent modern humanoids:
 
 These robots represent the cutting edge of humanoid development, each contributing to the advancement of physical AI through different design philosophies and application targets.
 
-</ChapterTranslator>
+</ChapterCustomization>

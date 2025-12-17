@@ -3,9 +3,9 @@ sidebar_position: 4
 title: "Sensorimotor Intelligence"
 slug: /chapter-1-physical-ai/03-sensorimotor-intelligence
 ---
-import ChapterTranslator from '@site/src/components/Translation/chapterTranslator';
+import ChapterCustomization from '@site/src/components/ChapterCustomization/ChapterCustomization';
 
-<ChapterTranslator>
+<ChapterCustomization>
 
 # Sensorimotor Intelligence
 
@@ -38,4 +38,4 @@ Modern humanoids demonstrate advanced sensorimotor intelligence through a variet
 
 These examples highlight how sensorimotor intelligence is not just about isolated sensing or acting but the intelligent, coordinated interplay between the two.
 
-</ChapterTranslator>
+</ChapterCustomization>

@@ -3,9 +3,9 @@ sidebar_position: 10
 title: "Terminology"
 slug: /chapter-1-physical-ai/09-terminology
 ---
-import ChapterTranslator from '@site/src/components/Translation/chapterTranslator';
+import ChapterCustomization from '@site/src/components/ChapterCustomization/ChapterCustomization';
 
-<ChapterTranslator>
+<ChapterCustomization>
 
 # Terminology
 
@@ -65,4 +65,4 @@ This glossary provides definitions for key terms used throughout this chapter an
 *   **Torque**: A twisting force that tends to cause rotation.
 *   **World Model**: An internal representation maintained by a robot about its environment, including objects, their properties, and the robot's own position within that environment.
 
-</ChapterTranslator>
+</ChapterCustomization>

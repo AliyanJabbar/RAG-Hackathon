@@ -3,9 +3,9 @@ sidebar_position: 5
 title: "Physics-Aware Reasoning"
 slug: /chapter-1-physical-ai/04-physics-aware-reasoning
 ---
-import ChapterTranslator from '@site/src/components/Translation/chapterTranslator';
+import ChapterCustomization from '@site/src/components/ChapterCustomization/ChapterCustomization';
 
-<ChapterTranslator>
+<ChapterCustomization>
 
 # Physics-Aware Reasoning
 
@@ -52,4 +52,4 @@ While physics engines in simulations (e.g., Isaac Gym, MuJoCo) are invaluable fo
 
 This adaptation often involves techniques such as real-time system identification, robust control methods, and learning algorithms that can transfer knowledge gained in simulation to practical applications with minimal re-training.
 
-</ChapterTranslator>
+</ChapterCustomization>

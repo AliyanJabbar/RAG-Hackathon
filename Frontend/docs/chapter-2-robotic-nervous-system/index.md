@@ -3,9 +3,9 @@ sidebar_position: 1
 title: "Chapter 2 The Robotic Nervous System (ROS 2)"
 slug: /chapter-2-robotic-nervous-system
 ---
-import ChapterTranslator from '@site/src/components/Translation/chapterTranslator';
+import ChapterCustomization from '@site/src/components/ChapterCustomization/ChapterCustomization';
 
-<ChapterTranslator>
+<ChapterCustomization>
 
 # Chapter 2 The Robotic Nervous System (ROS 2)
 
@@ -36,4 +36,4 @@ This chapter is structured to provide a comprehensive understanding of ROS 2, co
 - [07-humanoid-control-with-ros2-control.md](/docs/chapter-2-robotic-nervous-system/07-ros2-navigation-configuration)
 - [08-debugging-visualization-and-tools.md](/docs/chapter-2-robotic-nervous-system/08-ros2-navigation-advanced-topics)
 
-</ChapterTranslator>
+</ChapterCustomization>

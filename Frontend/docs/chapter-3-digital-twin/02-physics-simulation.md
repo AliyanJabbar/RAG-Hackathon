@@ -3,9 +3,9 @@ sidebar_position: 3
 title: 'Physics Simulation Fundamentals'
 slug: /chapter-3-digital-twin/physics-simulation
 ---
-import ChapterTranslator from '@site/src/components/Translation/chapterTranslator';
+import ChapterCustomization from '@site/src/components/ChapterCustomization/ChapterCustomization';
 
-<ChapterTranslator>
+<ChapterCustomization>
 
 # Physics Simulation Fundamentals
 
@@ -54,4 +54,4 @@ One of the primary challenges in robotics is the **sim-to-real gap**, which refe
 
 Bridging this gap often involves techniques like domain randomization, transfer learning, and robust control strategies that are less sensitive to model inaccuracies. Understanding these limitations is critical for developing effective robotic solutions.
 
-</ChapterTranslator>
+</ChapterCustomization>

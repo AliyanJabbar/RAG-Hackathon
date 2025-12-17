@@ -3,9 +3,9 @@ sidebar_position: 2
 title: "Middleware and Architecture"
 slug: /chapter-2-robotic-nervous-system/01-ros2-middleware-and-architecture
 ---
-import ChapterTranslator from '@site/src/components/Translation/chapterTranslator';
+import ChapterCustomization from '@site/src/components/ChapterCustomization/ChapterCustomization';
 
-<ChapterTranslator>
+<ChapterCustomization>
 
 # ROS 2 Middleware and Architecture
 
@@ -49,4 +49,4 @@ In ROS 2, a **node** is a fundamental computational unit, representing a process
 
 (Placeholder for ROS computation graph ASCII diagram)
 
-</ChapterTranslator>
+</ChapterCustomization>

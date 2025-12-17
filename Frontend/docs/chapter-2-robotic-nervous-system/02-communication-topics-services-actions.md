@@ -3,9 +3,9 @@ sidebar_position: 3
 title: "Communication: Topics, Services, and Actions"
 slug: /chapter-2-robotic-nervous-system/02-communication-topics-services-actions
 ---
-import ChapterTranslator from '@site/src/components/Translation/chapterTranslator';
+import ChapterCustomization from '@site/src/components/ChapterCustomization/ChapterCustomization';
 
-<ChapterTranslator>
+<ChapterCustomization>
 
 # Communication: Topics, Services, and Actions
 
@@ -48,4 +48,4 @@ In ROS 2, nodes communicate with each other using various mechanisms, forming th
 | **Cancellable?** | N/A             | No               | Yes                      |
 | **Use Case**     | Streaming data  | Immediate queries | Long-running, cancellable tasks |
 
-</ChapterTranslator>
+</ChapterCustomization>

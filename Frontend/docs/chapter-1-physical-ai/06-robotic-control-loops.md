@@ -3,9 +3,9 @@ sidebar_position: 7
 title: "Robotic Control Loops"
 slug: /chapter-1-physical-ai/06-robotic-control-loops
 ---
-import ChapterTranslator from '@site/src/components/Translation/chapterTranslator';
+import ChapterCustomization from '@site/src/components/ChapterCustomization/ChapterCustomization';
 
-<ChapterTranslator>
+<ChapterCustomization>
 
 # Robotic Control Loops
 
@@ -60,4 +60,4 @@ graph LR
 
 Each stage introduces a delay (ts, tc, ta), which must be accounted for to maintain stable and effective control.
 
-</ChapterTranslator>
+</ChapterCustomization>

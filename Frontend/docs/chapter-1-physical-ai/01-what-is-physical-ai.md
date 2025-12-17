@@ -3,9 +3,9 @@ sidebar_position: 2
 title: "What is Physical AI?"
 slug: /chapter-1-physical-ai/01-what-is-physical-ai
 ---
-import ChapterTranslator from '@site/src/components/Translation/chapterTranslator';
+import ChapterCustomization from '@site/src/components/ChapterCustomization/ChapterCustomization';
 
-<ChapterTranslator>
+<ChapterCustomization>
 
 # What is Physical AI?
 
@@ -51,4 +51,4 @@ graph LR
 
 In the physical AI flow, the loop represents continuous interaction: sensors gather data, perception processes it, a world model is updated, planning generates actions, control executes them, and actuators affect the physical environment, which in turn feeds back into the sensors. This closed-loop interaction is fundamental to embodied intelligence.
 
-</ChapterTranslator>
+</ChapterCustomization>

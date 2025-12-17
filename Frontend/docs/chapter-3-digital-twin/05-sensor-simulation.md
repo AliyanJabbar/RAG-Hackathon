@@ -3,9 +3,9 @@ sidebar_position: 6
 title: 'Sensor Simulation for Humanoids'
 slug: /chapter-3-digital-twin/sensor-simulation
 ---
-import ChapterTranslator from '@site/src/components/Translation/chapterTranslator';
+import ChapterCustomization from '@site/src/components/ChapterCustomization/ChapterCustomization';
 
-<ChapterTranslator>
+<ChapterCustomization>
 
 # Sensor Simulation for Humanoids
 
@@ -72,4 +72,4 @@ graph TD
 
 While sensor simulation offers immense benefits, it's important to consider ethical implications, particularly when dealing with privacy (e.g., simulating environments with human-like figures) and potential biases introduced by synthetic data generation. Developers must ensure that simulated data used for training does not perpetuate or amplify real-world biases.
 
-</ChapterTranslator>
+</ChapterCustomization>

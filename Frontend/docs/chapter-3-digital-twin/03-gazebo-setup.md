@@ -3,9 +3,9 @@ sidebar_position: 4
 title: 'Gazebo Simulation Environment'
 slug: /chapter-3-digital-twin/gazebo-setup
 ---
-import ChapterTranslator from '@site/src/components/Translation/chapterTranslator';
+import ChapterCustomization from '@site/src/components/ChapterCustomization/ChapterCustomization';
 
-<ChapterTranslator>
+<ChapterCustomization>
 
 # Gazebo Simulation Environment
 
@@ -92,4 +92,4 @@ roslaunch gazebo_ros spawn_model.launch -urdf -model my_robot -param robot_descr
 
 These commands initiate a simulation, allowing for visualization and interaction with the virtual environment.
 
-</ChapterTranslator>
+</ChapterCustomization>

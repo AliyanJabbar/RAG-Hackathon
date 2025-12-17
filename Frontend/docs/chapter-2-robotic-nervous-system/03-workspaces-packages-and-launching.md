@@ -3,9 +3,9 @@ sidebar_position: 4
 title: "Workspaces, Packages, and Launching"
 slug: /chapter-2-robotic-nervous-system/03-workspaces-packages-and-launching
 ---
-import ChapterTranslator from '@site/src/components/Translation/chapterTranslator';
+import ChapterCustomization from '@site/src/components/ChapterCustomization/ChapterCustomization';
 
-<ChapterTranslator>
+<ChapterCustomization>
 
 # Workspaces, Packages, and Launching
 
@@ -69,4 +69,4 @@ my_robot_node:
     sensor_topic: "/scan"
 ```
 
-</ChapterTranslator>
+</ChapterCustomization>

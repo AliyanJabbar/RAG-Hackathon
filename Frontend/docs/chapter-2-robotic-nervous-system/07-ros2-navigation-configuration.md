@@ -3,9 +3,9 @@ sidebar_position: 8
 title: "ROS 2 Navigation Configuration"
 slug: /chapter-2-robotic-nervous-system/07-ros2-navigation-configuration
 ---
-import ChapterTranslator from '@site/src/components/Translation/chapterTranslator';
+import ChapterCustomization from '@site/src/components/ChapterCustomization/ChapterCustomization';
 
-<ChapterTranslator>
+<ChapterCustomization>
 
 # ROS 2 Navigation Configuration
 
@@ -58,4 +58,4 @@ behavior_server:
 *   `max_rotational_vel`, `min_rotational_vel`, `rotational_acc_lim`: Parameters controlling the robot's rotational velocity and acceleration limits during behaviors like spinning.
 *   `enable_stamped_cmd_vel`: A boolean flag to enable or disable the use of stamped command velocities, which include a timestamp. This is `true` by default in Jazzy or newer versions of ROS 2.
 
-</ChapterTranslator>
+</ChapterCustomization>

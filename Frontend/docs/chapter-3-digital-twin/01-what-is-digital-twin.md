@@ -3,9 +3,9 @@ sidebar_position: 2
 title: 'What is a Digital Twin?'
 slug: /chapter-3-digital-twin/what-is-digital-twin
 ---
-import ChapterTranslator from '@site/src/components/Translation/chapterTranslator';
+import ChapterCustomization from '@site/src/components/ChapterCustomization/ChapterCustomization';
 
-<ChapterTranslator>
+<ChapterCustomization>
 
 # What is a Digital Twin?
 
@@ -41,4 +41,4 @@ The table below highlights the key differences and advantages of using a digital
 
 This comparison underscores the strategic advantages of integrating digital twin technology into the robotics development pipeline, enabling more efficient, safer, and cost-effective innovation.
 
-</ChapterTranslator>
+</ChapterCustomization>
