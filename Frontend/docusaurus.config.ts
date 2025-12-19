@@ -37,6 +37,22 @@ const config: Config = {
     WEB_URL: process.env.WEB_URL || 'http://localhost:3000',
   },
 
+  plugins: [
+    [
+      require.resolve('@easyops-cn/docusaurus-search-local'),
+      {
+        hashed: true,
+        language: ['en'],
+        highlightSearchTermsOnTargetPage: true,
+        explicitSearchResultPath: true,
+        docsRouteBasePath: '/',
+        // Enable keyboard shortcut for '/'
+        searchBarShortcut: true,
+        searchBarShortcutHint: true,
+      },
+    ],
+  ],
+
   presets: [
     [
       "classic",
@@ -90,6 +106,10 @@ const config: Config = {
           label: "Docs",
         },
         {
+          type: 'search',
+          position: 'right',
+        },
+        {
           type: 'custom-NavbarItem',
           position: 'right',
           // your custom props
@@ -136,6 +156,9 @@ const config: Config = {
         },
       ],
       copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+    },
+    search: {
+      provider: 'local',
     },
     prism: {
       theme: prismThemes.github,
